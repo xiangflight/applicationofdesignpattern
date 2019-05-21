@@ -9,7 +9,7 @@ public interface Logger {
      * 输出log日志，不折行
      *
      * @param level 级别
-     * @param msg 信息
+     * @param msg   信息
      */
     void print(int level, String msg);
 

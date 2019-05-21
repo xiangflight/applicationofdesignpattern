@@ -11,6 +11,12 @@ public class FilteredLogger implements Logger {
     private final Logger logger2;
     private final int level;
 
+    FilteredLogger(Logger logger1, Logger logger2, int level) {
+        this.logger1 = logger1;
+        this.logger2 = logger2;
+        this.level = level;
+    }
+
     @Override
     public void print(int level, String msg) {
         if (level == this.level) {
@@ -36,12 +42,6 @@ public class FilteredLogger implements Logger {
         } else {
             logger2.logException(e);
         }
-    }
-
-    FilteredLogger(Logger logger1, Logger logger2, int level) {
-        this.logger1 = logger1;
-        this.logger2 = logger2;
-        this.level = level;
     }
 
 }

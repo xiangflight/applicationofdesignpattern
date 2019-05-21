@@ -32,4 +32,8 @@ public class Loggers {
         return new TimestampLogger(logger);
     }
 
+    static Logger sequence(Logger[] loggers) {
+        return new SequenceLogger(loggers);
+    }
+
 }

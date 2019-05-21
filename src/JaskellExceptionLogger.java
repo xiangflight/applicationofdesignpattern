@@ -30,7 +30,7 @@ public class JaskellExceptionLogger implements Logger {
     @Override
     public void logException(Throwable e) {
         if (e instanceof EvaluationException) {
-            ((EvaluationException)e).printEvaluationTrace(out);
+            ((EvaluationException) e).printEvaluationTrace(out);
         } else {
             logger.logException(e);
         }

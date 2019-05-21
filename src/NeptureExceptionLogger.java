@@ -30,7 +30,7 @@ public class NeptureExceptionLogger implements Logger {
     @Override
     public void logException(Throwable e) {
         if (e instanceof NeptureException) {
-            ((NeptureException)e).printExecutionTrace(out);
+            ((NeptureException) e).printExecutionTrace(out);
         } else {
             logger.logException(e);
         }
